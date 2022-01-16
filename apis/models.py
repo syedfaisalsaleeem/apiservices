@@ -31,6 +31,3 @@ class Topic(models.Model):
 class File(models.Model):
     file = models.FileField()
     created_date = models.DateTimeField(default=now)
-
-    def __str__(self):
-        return self.file

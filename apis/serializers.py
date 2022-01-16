@@ -11,7 +11,7 @@ class TopicSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Topic
-        fields = ('id')
+        fields = "__all__"
 
 class GetDocumentSerializer(serializers.ModelSerializer):
     class Meta:

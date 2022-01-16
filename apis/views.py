@@ -97,7 +97,7 @@ def create_document(request,format=None):
     document_serializer = DocumentSerializer(data=data)
     if document_serializer.is_valid():
         document_serializer.save()
-        return JsonResponse({"message":"Document is created","body":document_serializer.data}, status=status.HTTP_201_CREATED) 
+        return JsonResponse({"message":"Document is created","body":document_serializer.data}, status=status.HTTP_201_CREATED,safe=True) 
     return Response(document_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
